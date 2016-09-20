@@ -16,5 +16,9 @@ ionic serve --lab<br />
 Generating bundle/packages<br />
 ionic g page users<br />
 
+Making authenticated HTTP<br />
+npm install angular2-jwt
+
+
 Tutorial how start
 http://ionicframework.com/docs/v2/getting-started/
