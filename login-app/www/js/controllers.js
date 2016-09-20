@@ -1,5 +1,6 @@
 angular.module('starter.controllers', [])
 
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
@@ -15,6 +16,14 @@ angular.module('starter.controllers', [])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
+})
+
+.controller('LoginCtrl', function($scope) {
+  $scope.data = {};
+
+  $scope.login = function() {
+    console.log("LOGIN user: " + $scope.data.username + " - PW: " + $scope.data.password);
+  }
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
