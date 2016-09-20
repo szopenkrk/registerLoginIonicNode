@@ -11,3 +11,7 @@ ionic start nazwaApki --v2 --ts<br />
 Start App<br />
 ionic serve<br />
 ionic serve --lab<br />
+
+<br />
+Generating bundle/packages<br />
+ionic g page users<br />
