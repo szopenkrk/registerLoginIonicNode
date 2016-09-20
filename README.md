@@ -15,3 +15,6 @@ ionic serve --lab<br />
 <br />
 Generating bundle/packages<br />
 ionic g page users<br />
+
+Tutorial how start
+http://ionicframework.com/docs/v2/getting-started/
