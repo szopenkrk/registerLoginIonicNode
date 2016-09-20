@@ -1,15 +1,17 @@
 var mongoose = require('mongoose'),
     bcrypt = require('bcrypt-nodejs'),
-    UserSchema = new mongoose.Schema({
+    GirlSchema = new mongoose.Schema({
         name: {type: String, unique: false, required: true},
         username: {type: String, unique: true, required: true},
         password: {type: String, required: true},
         email: {type: String, required: true, unique: true},
-        cash: {type: String, required: true,},
+        cash: {type: String, required: true },
+        description: {type: String, required: false },
+        photos: {type: Array, required: true}
     });
 
 
-UserSchema.pre('save', function (callback) {
+GirlSchema.pre('save', function (callback) {
     var user = this;
 
     if (!user.isModified('password')) {
@@ -32,4 +34,4 @@ UserSchema.pre('save', function (callback) {
 });
 
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Girl', GirlSchema);
