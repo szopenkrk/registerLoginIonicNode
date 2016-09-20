@@ -8,7 +8,6 @@ exports.postGirl = function (req, res) {
         email: req.body.email,
         cash: req.body.cash,
         username: req.body.username,
-        photos: req.body.photos,
     });
 
     girl.name = req.body.name;
@@ -16,7 +15,6 @@ exports.postGirl = function (req, res) {
     girl.email = req.body.email;
     girl.cash = req.body.cash;
     girl.username = req.body.username;
-    girl.photos = req.body.photos;
 
     girl.save(function (err) {
         if (err) {

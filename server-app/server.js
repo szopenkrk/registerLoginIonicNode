@@ -6,6 +6,7 @@ var express = require('express'),
 
 var usersController =require('./src/controllers/users');
 var girlsController =require('./src/controllers/girls');
+var photosController =require('./src/controllers/photos');
 
 
 var port = 8080;
@@ -53,6 +54,16 @@ router.route('/girls/:girl_id')
     .get(girlsController.getGirl)
     .put(girlsController.putGirl)
     .delete(girlsController.deleteGirl)
+
+
+router.route('/girls/:girl_id/photos')
+    .post(photosController.postPhoto)
+    .get(photosController.getPhotos);
+
+router.route('/girls/:girl_id/photos/:photo_id')
+    .get(photosController.getPhoto)
+    .delete(photosController.deletePhoto);
+
 
 
 app.use(bodyParser.urlencoded({extended: true}));
