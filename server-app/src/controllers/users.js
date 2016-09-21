@@ -8,14 +8,13 @@ exports.postUser = function (req, res) {
     });
 
     user.name = req.body.name;
-    user.job = req.body.job;
     user.note = req.body.note;
 
     user.save(function (err) {
         if (err) {
             res.send(err);
         }
-        res.json({msg: 'User added to DB', data: user});
+        res.json({msg: 'User has been added to DB', data: user});
     })
 };
 
@@ -45,7 +44,6 @@ exports.putUser = function (req, res) {
         }
 
         user.name = req.body.name;
-        user.job = req.body.job;
         user.note = req.body.note;
 
         user.save(function (err) {
