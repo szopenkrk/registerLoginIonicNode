@@ -22,3 +22,5 @@ npm install angular2-jwt
 
 Tutorial how start
 http://ionicframework.com/docs/v2/getting-started/
+
+https://forum.ionicframework.com/t/login-form/54445/2
