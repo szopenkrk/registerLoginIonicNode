@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 
 /*
   Generated class for the MapPage page.
@@ -12,8 +11,5 @@ import { NavController } from 'ionic-angular';
 })
 export class MapPage {
 
-  constructor(private navCtrl: NavController) {
-
-  }
 
 }

@@ -8,6 +8,7 @@ exports.postGirl = function (req, res) {
         email: req.body.email,
         cash: req.body.cash,
         username: req.body.username,
+        thumbnail: req.body.thumbnail
     });
 
     girl.name = req.body.name;
@@ -15,6 +16,7 @@ exports.postGirl = function (req, res) {
     girl.email = req.body.email;
     girl.cash = req.body.cash;
     girl.username = req.body.username;
+    girl.thumbnail = req.body.thumbnail;
 
     girl.save(function (err) {
         if (err) {
@@ -49,7 +51,12 @@ exports.putGirl = function (req, res) {
             res.send(err)
         }
 
-        girl.name = req.body.name;
+        girl.name = req.body.name || girl.name;
+        girl.password = req.body.password || girl.password;
+        girl.email = req.body.email || girl.email;
+        girl.cash = req.body.cash || girl.cash;
+        girl.username = req.body.username || girl.username;
+        girl.thumbnail = req.body.thumbnail || girl.thumbnail;
 
         girl.save(function (err) {
             if (err) {

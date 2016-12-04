@@ -1,18 +1,17 @@
-<!--
-  Generated template for the GirlsPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>girls</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <div *ngFor="let girl of response | async">
+    <div style="background: #7f7f7f; width:100%; height: auto; margin-bottom:40px;">
+      <pre>{{girl.name}}</pre>
+      <pre>{{girl.username}}</pre>
+      <pre>{{girl.email}}</pre>
+      <img src="{{girl.thumbnail}}"/>
+    </div>
 
-<ion-content padding>
-
+  </div>
 </ion-content>

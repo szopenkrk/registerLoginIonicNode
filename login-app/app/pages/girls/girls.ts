@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Http,Response } from '@angular/http';
+import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import  {Observable} from 'rxjs/Rx';
 
-/*
-  Generated class for the GirlsPage page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   templateUrl: 'build/pages/girls/girls.html',
 })
 export class GirlsPage {
 
-  constructor(private navCtrl: NavController) {
 
+  response: Observable<any[]>;
+
+  constructor(private navCtrl: NavController, private http: Http) {
+    var url = 'http://localhost:8080/api/girls';
+
+    this.response = this.http.get(url).map(res => res.json());
   }
 
 }
