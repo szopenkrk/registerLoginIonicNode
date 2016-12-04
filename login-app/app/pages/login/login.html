@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Logowanie
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+  <form>
+    <ion-item >
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" value="" ></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label floating>Password</ion-label>
+      <ion-input type="text" value="" ></ion-input>
+    </ion-item>
+
+    <br/><br/>
+    <button type="submit" class="custom-button" (click)="itemClicked(item)" block>Zaloguj Się</button>
+    <button type="submit" class="custom-button register" (click)="itemClicked(item)" block>Rejestracja</button>
+  </form>
+</ion-content>

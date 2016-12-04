@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ionic2-sidemenu-tabs/ionic2-sidemenu-tabs.iml" filepath="$PROJECT_DIR$/../ionic2-sidemenu-tabs/ionic2-sidemenu-tabs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/registerLoginIonicNode.iml" filepath="$PROJECT_DIR$/.idea/registerLoginIonicNode.iml" />
     </modules>
   </component>

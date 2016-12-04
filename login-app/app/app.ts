@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { StatusBar } from 'ionic-native';
 import { App, Platform, Nav, MenuController, NavController, ionicBootstrap } from 'ionic-angular';
+import { LoginPage } from './pages/login/login'
 import { HomePage } from './pages/home/home'
 import { GirlsPage } from './pages/girls/girls';
 import { AboutPage } from './pages/about/about';
@@ -23,10 +24,13 @@ export class MyApp {
 
 
     this.pages = [
+      { title: 'Login', component: LoginPage},
+      { title: 'Home', component: HomePage},
       { title: 'Girls', component: GirlsPage },
       { title: 'About', component: AboutPage },
       { title: 'Map', component: MapPage },
       { title: 'Profile', component: ProfilePage },
+      { title: 'Wyloguj' }
     ];
 
     this.platform.ready().then(() => {
