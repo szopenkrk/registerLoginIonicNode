@@ -10,8 +10,6 @@ import  {Observable} from 'rxjs/Rx';
   templateUrl: 'build/pages/girls/girls.html',
 })
 export class GirlsPage {
-
-
   response: Observable<any[]>;
 
   constructor(private navCtrl: NavController, private http: Http) {

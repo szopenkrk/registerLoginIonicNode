@@ -1,17 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>girls</ion-title>
+    <ion-title>Dziewczyny</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let girl of response | async">
+  <button style="height:450px;" *ngFor="let girl of response | async">
     <div style="background: #7f7f7f; width:100%; height: auto; margin-bottom:40px;">
-      <pre>{{girl.name}}</pre>
-      <pre>{{girl.username}}</pre>
-      <pre>{{girl.email}}</pre>
-      <img src="{{girl.thumbnail}}"/>
+      <a href="">
+        <pre>{{girl.name}}</pre>
+        <pre>{{girl.username}}</pre>
+        <pre>{{girl.email}}</pre>
+        <img src="{{girl.thumbnail}}"/>
+      </a>
     </div>
 
-  </div>
+  </button>
 </ion-content>
